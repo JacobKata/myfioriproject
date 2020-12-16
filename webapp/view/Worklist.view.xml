@@ -17,7 +17,6 @@
 						</SearchField>
 					</OverflowToolbar>
 				</headerToolbar>
-				asdfsdfsdfsdf
 				<columns>
 					<Column demandPopin="true">
 						<Label text="Name"/>
