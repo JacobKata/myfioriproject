@@ -1,7 +1,7 @@
 <mvc:View controllerName="coct.zdownload.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic">
 	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false">
 		<semantic:titleHeading>
-			<Title text="{i18n>worklistTitle}"/>
+			<Title text="Download GIT Excel"/>
 		</semantic:titleHeading>
 		<semantic:content>
 			<Table id="idImpactTable" alternateRowColors="true" items="{ path: 'impactModel>/results'}" selectionChange="onSuppPress"
