@@ -1,0 +1,50 @@
+<mvc:View controllerName="coct.zdownload.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.f.semantic">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false">
+		<semantic:titleHeading>
+			<Title text="{i18n>worklistTitle}"/>
+		</semantic:titleHeading>
+		<semantic:content>
+			<Table id="idImpactTable" alternateRowColors="true" items="{ path: 'impactModel>/results'}" selectionChange="onSuppPress"
+				modeAnimationOn="false">
+				<headerToolbar>
+					<OverflowToolbar id="otbImpSubheaderImpact">
+						<Title text="Download to Excel"></Title>
+						<ToolbarSpacer/>
+						<Button tooltip="Sort" icon="sap-icon://sort" press="handleSortButtonPressed"/>
+						<Button icon="sap-icon://excel-attachment" press="onExport"/>
+						<SearchField id="maximpPriceImpact" liveChange="onliveChange">
+							<layoutData><OverflowToolbarLayoutData minWidth="200px" maxWidth="300px" shrinkable="true"/></layoutData>
+						</SearchField>
+					</OverflowToolbar>
+				</headerToolbar>
+				<columns>
+					<Column demandPopin="true">
+						<Label text="Name"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="SurName"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="City"/>
+					</Column>
+					<Column minScreenWidth="Tablet" demandPopin="true">
+						<Label text="Postal Code"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{impactModel>Name1}"/>
+							<Text text="{impactModel>Name2}"/>
+							<Text text="{impactModel>City1}"/>
+							<Text text="{impactModel>PostCode1}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+	</semantic:SemanticPage>
+</mvc:View>

@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleFilterDialogConfirm">
+		<filterItems>
+			<ViewSettingsFilterItem
+				text="Name"
+				key="Name1"
+				multiSelect="false">
+				<items>
+					<ViewSettingsItem text="Ascending" key="Name1___LE___05___X" />
+					<ViewSettingsItem text="Decending" key="Name1___BT___05___07" />
+				</items>
+			</ViewSettingsFilterItem>
+			<!--<ViewSettingsFilterItem-->
+			<!--	text="Price"-->
+			<!--	key="Price"-->
+			<!--	multiSelect="false">-->
+			<!--	<items>-->
+			<!--		<ViewSettingsItem text="Less Than 100" key="Price___LE___100___X" />-->
+			<!--		<ViewSettingsItem text="Between 100 and 1000" key="Price___BT___100___1000" />-->
+			<!--		<ViewSettingsItem text="More Than 1000" key="Price___GT___1000___X" />-->
+			<!--	</items>-->
+			<!--</ViewSettingsFilterItem>-->
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
